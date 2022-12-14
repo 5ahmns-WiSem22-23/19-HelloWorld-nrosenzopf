@@ -7,15 +7,12 @@ public class HelloMethoden : MonoBehaviour
     //2) Instanzvariable nutzen
     private int startValue = 0;
 
-
     //3 Der Wert der dazugezählt wird ist bei Deklaration noch nicht bekannt
     // t.B: Random oder User Input
     private int startValue3 = 0;
 
-
     //4) Copy by Value
     private int startValue4 = 10;
-
 
     //5) Return
     private int startValue5 = 20;
@@ -32,20 +29,20 @@ public class HelloMethoden : MonoBehaviour
         Debug.Log("after startValue:" + startValue);
 
         //ad 3)
-        Debug.Log("before startValue3:" + startValue);
+        Debug.Log("before startValue:" + startValue3);
         IncrementByX(Random.Range(1, 10));
-        Debug.Log("after start Value3:" + startValue);
+        Debug.Log("after start Value:" + startValue3);
 
         //at 4)
-        Debug.Log("before startValue4:" + startValue);
+        Debug.Log("before startValue:" + startValue4);
         DecrementByOne(startValue4);
-        Debug.Log("after start Value4:" + startValue);
+        Debug.Log("after start Value:" + startValue4);
 
 
         //at 5)
-        Debug.Log("before startValue5:" + startValue);
+        Debug.Log("before startValue:" + startValue5);
         startValue5 = DecrementByX(startValue5, 2);
-        Debug.Log("after start Value5:" + startValue);
+        Debug.Log("after start Value:" + startValue5);
     }
     
     //5)
