@@ -5,17 +5,21 @@ public class HelloMethoden : MonoBehaviour
 {
 
     //2) Instanzvariable nutzen
-    private int startValue = 0;
+    private int startV = 0;
 
     //3 Der Wert der dazugezählt wird ist bei Deklaration noch nicht bekannt
     // t.B: Random oder User Input
-    private int startValue3 = 0;
+    private int startV3 = 0;
 
     //4) Copy by Value
-    private int startValue4 = 10;
+    private int startV4 = 10;
 
     //5) Return
-    private int startValue5 = 20;
+    private int startV5 = 20;
+
+    //6) MyWork
+    private string x = "before start Value:";
+    private string y = "after start Value:";
 
 
     void Start()
@@ -24,46 +28,46 @@ public class HelloMethoden : MonoBehaviour
 
 
         //2) Instanzvariable nutzen
-        Debug.Log("before startValue:" + startValue);
+        Debug.Log(x + startV);
         IncrementByone();
-        Debug.Log("after startValue:" + startValue);
+        Debug.Log(y + startV);
 
         //ad 3)
-        Debug.Log("before startValue:" + startValue3);
+        Debug.Log(x + startV3);
         IncrementByX(Random.Range(1, 10));
-        Debug.Log("after start Value:" + startValue3);
+        Debug.Log(y + startV3);
 
         //at 4)
-        Debug.Log("before startValue:" + startValue4);
-        DecrementByOne(startValue4);
-        Debug.Log("after start Value:" + startValue4);
+        Debug.Log(x + startV4);
+        OutputDecrementedValue(startV4);
+        Debug.Log(y + startV4);
 
 
         //at 5)
-        Debug.Log("before startValue:" + startValue5);
-        startValue5 = DecrementByX(startValue5, 2);
-        Debug.Log("after start Value:" + startValue5);
+        Debug.Log(x + startV5);
+        startV5 = GetDifference(startV5, 2);
+        Debug.Log(y + startV5);
     }
     
     //5)
-    private int DecrementByX(int start, int valToSub)
+    private int GetDifference(int a, int b) //Da Hol ma was
     {
-        return start - valToSub;
+        return a - b;
     }
 
-    private void DecrementByOne(int val)
+    private void OutputDecrementedValue(int c)
     {
-        val--;
-        Debug.Log("val:" + val);
+        c--;
+        Debug.Log("val:" + c);
     }
-   private void IncrementByX(int valToAdd)
+   private void IncrementByX(int d) //Da bekommen wir wirklich was
    {
-    startValue3 += valToAdd;
+    startV3 += d;
    }
     
    private void IncrementByone()
     {
-        startValue++;
+        startV++;
         //startValue = startValue +1;
     }
 }
